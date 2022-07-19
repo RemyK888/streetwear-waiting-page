@@ -1,0 +1,169 @@
+* {
+    cursor: url('../assets/peace.cur'), auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    max-width: 1280px;
+    background: black;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+
+.container,
+.elements figure {
+    height: 0px;
+    line-height: 0px;
+    color: white;
+}
+
+.elements figure:nth-of-type(1) {
+    -webkit-transform: rotateX(0deg) translateZ(30px);
+}
+
+.elements figure:nth-of-type(2) {
+    -webkit-transform: rotateX(60deg) translateZ(30px);
+}
+
+.elements figure:nth-of-type(3) {
+    -webkit-transform: rotateX(120deg) translateZ(30px);
+}
+
+.elements figure:nth-of-type(4) {
+    -webkit-transform: rotateX(180deg) translateZ(30px);
+}
+
+.elements figure:nth-of-type(5) {
+    -webkit-transform: rotateX(240deg) translateZ(30px);
+}
+
+.elements figure:nth-of-type(6) {
+    -webkit-transform: rotateX(300deg) translateZ(30px);
+}
+
+.elements[data-state="1"] figure:nth-of-type(1),
+.elements[data-state="2"] figure:nth-of-type(2),
+.elements[data-state="3"] figure:nth-of-type(3),
+.elements[data-state="4"] figure:nth-of-type(4),
+.elements[data-state="5"] figure:nth-of-type(5),
+.elements[data-state="6"] figure:nth-of-type(6) {
+    opacity: 1;
+    color: #fcba03;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 50%;
+    perspective: 1000px;
+}
+
+.elements {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    z-index: 100;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all ease-in-out 2s;
+}
+
+.elements figure {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    text-align: center;
+    opacity: 1;
+    transition: all 2s cubic-bezier(.9, .1, .9, .1);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+​ canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#distortion-text {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.rotatingText {
+    color: #fcba03;
+}
+
+#outerCircleText {
+    font-family: 'Lora';
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    cursor: default;
+}
+
+#outerCircleText div {
+    position: relative;
+}
+
+#outerCircleText div div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.about {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.about-text {
+    font-family: 'Lora';
+    color: rgb(44, 44, 44);
+    letter-spacing: 1px;
+    font-size: x-small;
+}
+
+.about-text a {
+    color: rgb(44, 44, 44);
+    ;
+}
